@@ -1,3 +1,9 @@
+import Header from "./components/Header.tsx"
+
 export default function App() {
-  return <div></div>
+  return (
+    <>
+      <Header />
+    </>
+  )
 }
