@@ -1,12 +1,13 @@
 import { CiSearch } from "react-icons/ci"
+import { Link } from "react-router-dom"
 
 export default function Header() {
   return (
-    <div className="w-full h-20 flex items-center justify-between px-10">
-      <section className="h-full flex gap-4 items-center justify-center">
+    <div className="w-full h-20 flex items-center justify-between px-10 absolute top-0 left-0 right-0 bg-white z-10">
+      <Link to="/" className="h-full flex gap-4 items-center justify-center">
         <img src="" alt="" className="" />
         <h2 className="font-bold text-lg">Movie Night</h2>
-      </section>
+      </Link>
       <Menu />
       <InputSection />
     </div>
@@ -40,15 +41,24 @@ const InputSection = () => {
 const Menu = () => {
   return (
     <ul className="w-fit h-full flex items-center gap-2">
-      <li className="text-sm text-gray-800 px-2 cursor-pointer font-semibold">
+      <Link
+        to="/"
+        className="text-sm text-gray-800 px-2 cursor-pointer font-semibold font-secondary"
+      >
         Home
-      </li>
-      <li className="text-sm text-gray-800 px-2 cursor-pointer font-semibold">
+      </Link>
+      <Link
+        to="/movie"
+        className="text-sm text-gray-800 px-2 cursor-pointer font-semibold font-secondary"
+      >
         Movie
-      </li>
-      <li className="text-sm text-gray-800 px-2 cursor-pointer font-semibold">
+      </Link>
+      <Link
+        to="/tvshow"
+        className="text-sm text-gray-800 px-2 cursor-pointer font-semibold font-secondary"
+      >
         TV show
-      </li>
+      </Link>
     </ul>
   )
 }
